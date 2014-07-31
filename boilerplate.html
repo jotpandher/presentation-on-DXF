@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title> Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+	<section class="slide">
+      <h1>Presentation on DXF Task</h1>
+    </section>
+    <section class="slide">
+     <center><h2> What is DXF?</h2>
+    <h3>DXF is a file extension for a graphic image format typically used with CAD software. DXF stands for Drawing eXchange Format.
+ It has two versions ASCII and binary forms.
+ </h3></center>
+    </section>
+
+    <section class="slide">
+      <center><h2>Parts of DXF files</h2></center>
+<h3>1.  HEADER section – General information about the drawing. Each parameter has a variable name and an associated value.</h3>
+<h3>2.  CLASSES section – Holds the information for application-defined classes whose instances appear in the BLOCKS, ENTITIES, and OBJECTS sections of the database.</h3>
+<h3>3.  TABLES section – This section contains definitions of named items.</h3>
+<h3>  Types of table section :Layer (LAYER) table and 
+    User Coordinate System (UCS) table </h3>
+<h3>4.  BLOCKS section – This section contains Block Definition entities describing the entities comprising each Block in the drawing.</h3>
+<h3>5.  ENTITIES section – This section contains the drawing entities, including any Block References.</h3>
+<h3>6.  END OF FILE</h3>
+    </section>
+
+    <section class="slide">
+      <center><h2>Group Codes</h2></center>
+	<center><h3>The group code is an integer which implicitly defines the value type and acts as a key for the value. In ASCII DXF, group codes and values are written in a single line each.</h3></center>
+    </section>
+
+	<section class="slide">
+      <center><h2>Libraries Used</h2></center>
+	<center><h3> libdxfrw 0.5.7</h3></center>
+      	<center><h3> dxflib</h3></center>
+    </section> 
+	
+	<section class="slide">
+      <h1>Any Queries</h1>
+	
+    </section>
+	<section class="slide">
+      <h1>Thanks</h1>
+	</section>
+	
+	
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
